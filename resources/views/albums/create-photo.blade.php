@@ -4,13 +4,13 @@
         enctype="multipart/form-data">
         @csrf
         <div>
-            <label  class="form-label">Chose image</label>
+            <label for="formFileLg" class="form-label">Chose image</label>
             {{--  <input class="form-control form-control-lg" name="photo" type="file" accept="image/*">  --}}
-              <input type="file" class="filepond" name="photos[]"  multiple >
-           <div>
-               @error('photos')
-              <span class="text-danger">{{ $message }}</span>
-             @enderror
+            <input type="file" class="filepond" name="photo" accept="image/*">
+            <div>
+                @error('photo')
+                    <span class="text-danger">{{ $message }}</span>
+                @enderror
             </div>
         </div>
         <div class="col-auto">
